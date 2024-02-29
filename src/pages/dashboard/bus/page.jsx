@@ -2,8 +2,12 @@ import { useState } from "react"
 
 export default function BusManagementPage() {
   const [tabs, setTabs] = useState([
-    { name: "Bus List", isActive: true },
-    { name: "Add Bus", isActive: false }
+    { name: "Danh sách", isActive: true, icon: <>
+1
+    </> },
+    { name: "Tìm tuyến xe", isActive: <>
+    2
+    </> }
   ])
   return (
     <div className="w-full">
