@@ -12,49 +12,60 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { cn } from "@/lib/utils";
 
 const menuItems = [
-  { title: "Home", icon: 
-  (
-    <div>
-      <img src={HomeIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-  link:"/"  
-},
-  { title: "Quản lí Office", icon: (
-    <div>
-      <img src={OfficeIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-link:"/office" },
-  { title: "Quản lí tuyến xe", icon: (
-    <div>
-      <img src={BusIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-link:"/bus" },
-  { title: "Quản lí đơn hàng`", icon: (
-    <div>
-      <img src={OrderIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-link:"/order" },
-  { title: "Quản lí nhân viên", icon: (
-    <div>
-      <img src={StaffIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-link:"/staff" },
-  { title: "Cài đặt", icon: (
-    <div>
-      <img src={SettingIcon} alt="icon" className="h-10 w-10"/>
-    </div>
-  ),
-link:"/setting" }
+  {
+    title: "Home", icon:
+      (
+        <div>
+          <img src={HomeIcon} alt="icon" className="h-10 w-10" />
+        </div>
+      ),
+    link: "/"
+  },
+  {
+    title: "Quản lí Office", icon: (
+      <div>
+        <img src={OfficeIcon} alt="icon" className="h-10 w-10" />
+      </div>
+    ),
+    link: "/office"
+  },
+  {
+    title: "Quản lí tuyến xe", icon: (
+      <div>
+        <img src={BusIcon} alt="icon" className="h-10 w-10" />
+      </div>
+    ),
+    link: "/bus"
+  },
+  {
+    title: "Quản lí đơn hàng", icon: (
+      <div>
+        <img src={OrderIcon} alt="icon" className="h-10 w-10" />
+      </div>
+    ),
+    link: "/order"
+  },
+  {
+    title: "Quản lí nhân viên", icon: (
+      <div>
+        <img src={StaffIcon} alt="icon" className="h-10 w-10" />
+      </div>
+    ),
+    link: "/staff"
+  },
+  {
+    title: "Cài đặt", icon: (
+      <div>
+        <img src={SettingIcon} alt="icon" className="h-10 w-10" />
+      </div>
+    ),
+    link: "/setting"
+  }
 ];
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const location  = useLocation()
+  const location = useLocation()
   return (
     <div className={cx("sidebar", { "sidebar-closed": !isOpen })}>
       <button className={"flex items-center ml-5"} onClick={() => setIsOpen(!isOpen)}>

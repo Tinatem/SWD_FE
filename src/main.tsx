@@ -12,6 +12,8 @@ import DashboardLayout from './components/layout/DashboardLayout.tsx';
 import OfficeManagementPage from './pages/dashboard/office/page.tsx';
 import BusManagementPage from './pages/dashboard/bus/page.tsx';
 import OrderManagementPage from './pages/dashboard/order/page.tsx';
+import NotProccessLayout from './pages/dashboard/order/components/NotProccessList.tsx';
+import OrderDetails from './pages/dashboard/order/components/OrderDetails.tsx';
 
 const router = createBrowserRouter([
   {
@@ -33,6 +35,16 @@ const router = createBrowserRouter([
       {
         path: "/order",
         element: <OrderManagementPage />,
+        children: [
+          {
+            path: "/order",
+            element: <NotProccessLayout />,
+          },
+          {
+            path: "/order/:id",
+            element: <OrderDetails />,
+          },
+        ]
       }
     ],
   }
