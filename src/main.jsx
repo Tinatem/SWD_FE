@@ -11,6 +11,7 @@ import BusManagementPage from "./pages/dashboard/bus/page.jsx"
 import OrderManagementPage from "./pages/dashboard/order/page.jsx"
 import ErrorPage from "./pages/error/ErrorPage.jsx"
 import LoginPage from "@/pages/login"
+import BusDetaisPage from "./pages/dashboard/bus/bus-details/page.jsx"
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/bus",
         element: <BusManagementPage />
+      },
+      {
+        path: "/bus/:id",
+        element: <BusDetaisPage />
       },
       {
         path: "/order",
